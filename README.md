@@ -8,7 +8,7 @@ cd ~/azure-ai-102-mar-24
 ls
 ```
 
-# Lab Setup
+## Lab Setup
 ```
 cd ~
 rm -rf ~/ai-102
@@ -23,6 +23,7 @@ git clone https://github.com/atingupta2005/mslearn-openai
 ls
 ```
 
+
 ## Connect to Azure CLI
 ```
 sudo chmod -R a+rw /pyenv
@@ -31,3 +32,24 @@ source /pyenv/bin/activate
 az login -u u1@atingupta.xyz -p password
 az account show
 ```
+
+
+## Provision Azure resources
+### Create an Azure AI services multi-service account resource
+- Name: ag-ai-services-multi
+- Resource Group: rg-ai-practice
+- Region: Choose from East US, West Europe, West US 2
+
+#### Get key in CLI:
+```
+az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
+```
+
+### Create Key Vault
+- Name: kv-ai-practice
+- Secret Name: AI-Services-Key
+- Secret Value: The key of Azure AI services multi-service account resource
+
+### Create Storage account
+- Name: customclassifyagmar24
+- Region: Choose the same region you used for your Azure AI Service resource
