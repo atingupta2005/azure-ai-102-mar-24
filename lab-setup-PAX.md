@@ -2,8 +2,9 @@
 
 ## Clone Repos in another powershell
 ```
-mkdir ai-102
-cd ai-102
+cd
+mkdir ~/ai-102
+cd ~/ai-102
 git clone https://github.com/atingupta2005/mslearn-ai-services
 git clone https://github.com/atingupta2005/mslearn-ai-vision
 git clone https://github.com/atingupta2005/mslearn-ai-language
