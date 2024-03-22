@@ -4,6 +4,7 @@ git clone https://github.com/atingupta2005/azure-ai-102-mar-24
 
 cd ~
 rm -rf ~/ai-102/mslearn-ai-services
+mkdir -p ~/ai-102
 cd ~/ai-102
 git clone https://github.com/atingupta2005/mslearn-ai-services
 ls -al
