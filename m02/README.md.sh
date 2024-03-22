@@ -10,13 +10,23 @@ cd ~/ai-102
 git clone https://github.com/atingupta2005/mslearn-ai-vision
 ls -al
 
-sudo chmod -R a+rw /pyenv
 source /pyenv/bin/activate
 az login -u u1@atingupta.xyz -p changeme
 az account show
 
-
-sudo chmod -R a+rw /pyenv
-cd ~/ai-102/mslearn-ai-vision/Labfiles/01-use-azure-ai-services/Python/rest-client/
+cd ~/ai-102/mslearn-ai-vision/Labfiles/01*/Python/image-analysis
+sed -i 's/mykeyneedtoreplace/replacekey/g' .env
+az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
 
 pip install python-dotenv
+pip install azure-ai-vision-imageanalysis==1.0.0b1
+
+python image-analysis.py images/street.jpg
+python image-analysis.py images/building.jpg
+python image-analysis.py images/person.jpg
+
+sed -i 's/backgroundRemoval/foregroundMatting/g' image-analysis.py
+
+python image-analysis.py images/street.jpg
+python image-analysis.py images/building.jpg
+python image-analysis.py images/person.jpg
