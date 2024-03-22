@@ -27,6 +27,7 @@ ls
 ```
 sudo chmod -R a+rw /pyenv
 source /pyenv/bin/activate
+# Ask password from trainer
 az login -u u1@atingupta.xyz -p password
 az account show
 ```
