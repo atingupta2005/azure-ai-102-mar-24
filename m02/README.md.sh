@@ -52,5 +52,18 @@ head training-images/training_labels.json
 ###Create a custom model training project
 #- Follow instructions at URL below:
 ####- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#create-a-custom-model-training-project
-#- https://portal.vision.cognitive.azure.com/
 
+## Detect Objects in Images with Custom Vision
+#- 03-custom-vision-object-detection(legacy).md
+### Create Custom Vision resources
+## - https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/03-custom-vision-object-detection(legacy).md#create-custom-vision-resources
+#### Already created:
+#-agaicustomvisionmar24
+#-agaicustomvisionmar24-prediction
+
+
+### Create a Custom Vision project
+###- Follow instrucionts at URL above. 
+### Note: We already created this resource
+cd ~/ai-102/mslearn-ai-vision/Labfiles/03*
+pip install azure-cognitiveservices-vision-customvision==3.1.0
