@@ -53,3 +53,20 @@ az cognitiveservices account keys list --name ag-ai-services-multi --resource-gr
 ### Create Storage account
 - Name: customclassifyagmar24
 - Region: Choose the same region you used for your Azure AI Service resource
+
+
+### Important URLs:
+#### This Repo
+- https://github.com/atingupta2005/azure-ai-102-mar-24
+
+#### Hands-on
+- https://github.com/atingupta2005/mslearn-ai-services
+- https://github.com/atingupta2005/mslearn-ai-vision
+- https://github.com/atingupta2005/mslearn-ai-language
+- https://github.com/atingupta2005/mslearn-ai-document-intelligence
+- https://github.com/atingupta2005/mslearn-knowledge-mining/
+- https://github.com/atingupta2005/mslearn-openai
+
+#### Others
+- https://portal.azure.com/
+- http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/auth-sign-in
