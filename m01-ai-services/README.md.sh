@@ -1,5 +1,7 @@
 # mslearn-ai-services
+## https://github.com/atingupta2005/mslearn-ai-services
 ## Get Started with Azure AI Services
+### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/01-use-azure-ai-services.md
 cd ~
 rm -rf ~/azure-ai-102-mar-24
 git clone https://github.com/atingupta2005/azure-ai-102-mar-24
@@ -29,7 +31,10 @@ pip install azure-ai-textanalytics==5.3.0
 
 python sdk-client.py
 
+### ------------------------------------------------------------
+
 ## Manage Azure AI Services Security
+### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/02-ai-services-security.md
 cd ~/ai-102/mslearn-ai-services/Labfiles/02-ai-services-security
 cat ~/.env | grep AI_SERVICE_KEY
 #Note: Replace key in below URL
@@ -57,8 +62,10 @@ pip install setuptools
 
 python keyvault-client.py
 
+### ------------------------------------------------------------
 
 ## Monitor Azure AI Services
+### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/03-monitor-ai-services.md
 #Configure an alert using Azure Portal
  #- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/03-monitor-ai-services.md#configure-an-alert
 
@@ -78,6 +85,8 @@ curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/
 
 #Return to the Metrics page in the Azure portal and refresh the Total Calls count chart.
 
+### ------------------------------------------------------------
+
 ## Use an Azure AI Services Container
 ##- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/04-use-a-container.md#use-an-azure-ai-services-container
 
@@ -85,5 +94,5 @@ curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/
 ##Deploy and run a Text Analytics container
 ##- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/04-use-a-container.md#deploy-and-run-a-text-analytics-container
 
-##Use the container. Note: Replace the IP Address
+## Use the container. Note: Replace the IP Address
 curl -X POST "http://52.224.30.99:5000/text/analytics/v3.0/languages" -H "Content-Type: application/json" --data-ascii "{'documents':[{'id':1,'text':'Hello world.'},{'id':2,'text':'Salut tout le monde.'}]}"

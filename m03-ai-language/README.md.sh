@@ -1,15 +1,14 @@
-# mslearn-ai-vision
-## Analyze Images with Azure AI Vision
-###- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/01-analyze-images.md
+# mslearn-ai-language
+## https://github.com/atingupta2005/mslearn-ai-language
 cd ~
 rm -rf ~/azure-ai-102-mar-24
 git clone https://github.com/atingupta2005/azure-ai-102-mar-24
 
 cd ~
-rm -rf ~/ai-102/mslearn-ai-vision
+rm -rf ~/ai-102/mslearn-ai-language
 mkdir -p ~/ai-102
 cd ~/ai-102
-git clone https://github.com/atingupta2005/mslearn-ai-vision
+git clone https://github.com/atingupta2005/mslearn-ai-language
 ls -al
 
 sudo chmod -R a+rw /pyenv
@@ -18,36 +17,58 @@ source /pyenv/bin/activate
 az login -u u1@atingupta.xyz -p changeme
 az account show
 
-cd ~/ai-102/mslearn-ai-vision/Labfiles/01*/Python/image-analysis
-pip install azure-ai-vision==0.15.1b1
+## Analyze Text
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/01-analyze-text.md
 
-pip install python-dotenv
+cd ~/ai-102/mslearn-ai-language/Labfiles/01*/Python/
 
+####-----------------------------------------------------
 
-## Classify images with an Azure AI Vision custom model
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md
+## Create a Question Answering Solution
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/02-qna.md
 
+cd ~/ai-102/mslearn-ai-language/Labfiles/02*/Python/
 
+####-----------------------------------------------------
 
-## Detect Objects in Images with Custom Vision
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/03-custom-vision-object-detection(legacy).md
+## Create a language understanding model with the Language service
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/03-language-understanding.md
 
+cd ~/ai-102/mslearn-ai-language/Labfiles/03*/Python/
 
+####-----------------------------------------------------
 
-## Detect and Analyze Faces
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/04-face-service.md
+## Custom text classification
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/04-text-classification.md
 
+cd ~/ai-102/mslearn-ai-language/Labfiles/04*/Python/
 
+####-----------------------------------------------------
 
-## Read Text in Images
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/05-ocr.md
+## Extract custom entities
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/05-extract-custom-entities.md
 
+cd ~/ai-102/mslearn-ai-language/Labfiles/05*/Python/
 
+####-----------------------------------------------------
 
-## Analyze Video with Video Analyzer
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/06-video-indexer.md
+## Translate Text
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/06-translate-text.md
 
+cd ~/ai-102/mslearn-ai-language/Labfiles/06*/Python/
 
-## Classify Images with Azure AI Custom Vision
-### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/07-custom-vision-image-classification(legacy).md
+####-----------------------------------------------------
 
+## Recognize and synthesize speech
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/07-speech.md
+
+cd ~/ai-102/mslearn-ai-language/Labfiles/07*/Python/
+
+####-----------------------------------------------------
+
+## Translate Speech
+###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/08-translate-speech.md
+
+cd ~/ai-102/mslearn-ai-language/Labfiles/01*/Python/
+
+####-----------------------------------------------------

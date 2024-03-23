@@ -1,6 +1,8 @@
 # mslearn-ai-vision
+## https://github.com/atingupta2005/mslearn-ai-vision
 ## -------------------------------------------------------------------------------------
 ## Analyze Images with Azure AI Vision
+### https://github.com/atingupta2005/mslearn-ai-vision/blob/main/Instructions/Exercises/01-analyze-images.md
 cd ~
 rm -rf ~/azure-ai-102-mar-24
 git clone https://github.com/atingupta2005/azure-ai-102-mar-24
@@ -23,18 +25,32 @@ pip install azure-ai-vision-imageanalysis==1.0.0b1
 pip install pillow==6.2.2
 pip install matplotlib
 
+relative_path=$(pwd | sed "s|^$HOME/||")
+
 python image-analysis.py images/street.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/street.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 python image-analysis.py images/building.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/building.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 python image-analysis.py images/person.jpg
-ls -al
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/person.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 
 sed -i 's/backgroundRemoval/foregroundMatting/g' image-analysis.py
 
 python image-analysis.py images/street.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/street.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 python image-analysis.py images/building.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/building.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 python image-analysis.py images/person.jpg
-ls -al
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/person.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/backgroundForeground.png
 
+
+## -------------------------------------------------------------------------
 ## Classify images with an Azure AI Vision custom model
 ##- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#classify-images-with-an-azure-ai-vision-custom-model
 cd ~/ai-102/mslearn-ai-vision/Labfiles/02-image-classification
@@ -52,11 +68,10 @@ head training-images/training_labels.json
 ####- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#create-a-custom-model-training-project
 
 
-
 ## -------------------------------------------------------------------------------------
 ## Detect Objects in Images with Custom Vision
+### https://github.com/atingupta2005/mslearn-ai-vision/blob/main/Instructions/Exercises/03-custom-vision-object-detection(legacy).md
 ### Create Custom Vision resources (Already Done)
-## - https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/03-custom-vision-object-detection(legacy).md#create-custom-vision-resources
 #-agaicustomvisionmar24
 #-agaicustomvisionmar24-prediction
 
@@ -89,4 +104,72 @@ cat ~/.env | grep Prediction
 cat ~/.env | grep ProjectID
 cat ~/.env | grep ModelName
 python test-detector.py  # Pending - Error: Invalid iteration
+
+## -------------------------------------------------------------------------
+
+## Detect and Analyze Faces
+### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/04-face-service.md
+pip install azure-ai-vision==0.15.1b1
+cd ~/ai-102/mslearn-ai-vision/Labfiles/04*/Python/computer-vision
+cat detect-people.py | grep getenv
+cat ~/.env | grep AI_SERVICE
+python detect-people.py
+relative_path=$(pwd | sed "s|^$HOME/||")
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/people.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/detected_people.jpg
+
+cd ~/ai-102/mslearn-ai-vision/Labfiles/04*/Python/face-api
+pip install azure-cognitiveservices-vision-face==0.6.0
+python analyze-faces.py   # Enter 1 as a number
+relative_path=$(pwd | sed "s|^$HOME/||")
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/detected_faces.jpg
+
+## -------------------------------------------------------------------------
+
+## Read Text in Images
+### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/05-ocr.md
+cd ~/ai-102/mslearn-ai-vision/Labfiles/05*/Python/read-text
+pip install azure-ai-vision-imageanalysis==1.0.0b1
+python read-text.py
+relative_path=$(pwd | sed "s|^$HOME/||")
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/Lincoln.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/images/Note.jpg
+echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_path/text.jpg
+
+
+## -------------------------------------------------------------------------
+
+## Analyze Video with Video Analyzer
+### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/06-video-indexer.md
+### Follow instructions at above URL
+cd ~/ai-102/mslearn-ai-vision/Labfiles/06*/
+cat ~/.env | grep VIDEO
+chmod a+x ./get-videos.sh
+./get-videos.sh
+
+## -------------------------------------------------------------------------
+
+## Classify Images with Azure AI Custom Vision
+### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/07-custom-vision-image-classification(legacy).md
+###- Follow instructions as above URL
+
+### Publish the image classification model
+### Refer to instructions at above URL
+
+### Use the image classifier from a client application
+cd ~/ai-102/mslearn-ai-vision/Labfiles/07*/Python/train-classifier
+pip install azure-cognitiveservices-vision-customvision==3.1.0
+cat train-classifier.py | grep getenv
+cat ~/.env | grep Training
+cat ~/.env | grep ProjectID
+
+# The tag names should match with the folder names else error will be throws
+python train-classifier.py
+
+cd ~/ai-102/mslearn-ai-vision/Labfiles/07*/Python/test-classifier
+cat test-classifier.py | grep getenv
+cat ~/.env | grep Prediction
+cat ~/.env | grep ProjectID
+cat ~/.env | grep ModelName
+python test-classifier.py 
 
