@@ -12,12 +12,10 @@ git clone https://github.com/atingupta2005/mslearn-ai-vision
 ls -al
 
 source /pyenv/bin/activate
-az login -u u1@atingupta.xyz -p changeme
+#az login -u u1@atingupta.xyz -p changeme
 az account show
 
 cd ~/ai-102/mslearn-ai-vision/Labfiles/01*/Python/image-analysis
-az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
-sed -i 's/mykeyneedtoreplace/replacekey/g' .env
 
 pip install python-dotenv
 pip install azure-ai-vision-imageanalysis==1.0.0b1
@@ -39,11 +37,11 @@ ls -al
 ## Classify images with an Azure AI Vision custom model
 ##- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#classify-images-with-an-azure-ai-vision-custom-model
 cd ~/ai-102/mslearn-ai-vision/Labfiles/02*
-head training-images/training_labels.json
-sed -i "s|<storageAccount>|customclassifyagmar24|g" training-images/training_labels.json
+#head training-images/training_labels.json  # Already Done
+#sed -i "s|<storageAccount>|customclassifyagmar24|g" training-images/training_labels.json # Already Done
 head training-images/training_labels.json
 
-### Note: Below steps are already done by trainer
+### Note: Below steps are already done
 ##- Enable public access on the storage account. In the left pane, navigate to Configuration in the Settings group, and enable Allow Blob anonymous access
 ##-In the left pane, select Containers and create a new container named fruit, and set Anonymous access level to Container (anonymous read access for containers and blobs).
 ##- Navigate to fruit, and upload the images (and the one JSON file) in Labfiles/02-image-classification/training-images to that container

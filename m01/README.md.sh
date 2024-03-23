@@ -22,26 +22,18 @@ cd ~/ai-102/mslearn-ai-services/Labfiles/01-use-azure-ai-services/Python/rest-cl
 
 pip install python-dotenv
 
-#Get ID of cognitiveservices account
-az login -u u1@atingupta.xyz -p changeme
-az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
-sed -i 's/mykeyneedtoreplace/replacekey/g' .env
-
 python rest-client.py
 
 
 cd ~/ai-102/mslearn-ai-services/Labfiles/01-use-azure-ai-services/Python/sdk-client
 pip install azure-ai-textanalytics==5.3.0
 
-#Get ID of cognitiveservices account
-az login -u u1@atingupta.xyz -p changeme
-az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
-sed -i 's/mykeyneedtoreplace/replacekey/g' .env
 python sdk-client.py
 
 ## Manage Azure AI Services Security
 cd ~/ai-102/mslearn-ai-services/Labfiles/02-ai-services-security
-az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
+cat ~/.env | grep AI_SERVICE_KEY
+#Note: Replace key in below URL
 curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: replacekey" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
 
 #Create a key vault and add a secret using Azure portal if not already created
@@ -49,10 +41,9 @@ curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/
   #-Secret Name: AI-Services-Key
   #-Secret value: The key from azure ai resource. 
   
-#Createa service principal if required
-az login -u u1@atingupta.xyz -p changeme
-az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
-az ad sp create-for-rbac -n "api://ag-ai-services" --role owner --scopes subscriptions/6896d70c-606d-4394-a6dc-f6fb42a97dfc/resourceGroups/rg-ai-practice
+#Createa service principal if required. Note: It is already created. No need to create
+#az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
+#az ad sp create-for-rbac -n "api://ag-ai-services" --role owner --scopes subscriptions/6896d70c-606d-4394-a6dc-f6fb42a97dfc/resourceGroups/rg-ai-practice
 
 #Give permissions to SP on Key Vault using Azure Portal
 {
@@ -62,6 +53,8 @@ az ad sp create-for-rbac -n "api://ag-ai-services" --role owner --scopes subscri
     "tenant": "6bb2f9af-a0af-4c32-a5ec-5f7011d37551"
 }
 
+cat ~/.env | grep APP_PASSWORD
+
 cd ~/ai-102/mslearn-ai-services/Labfiles/02-ai-services-security/Python/keyvault_client
 source /pyenv/bin/activate
 #Setup Python ENV
@@ -70,8 +63,6 @@ pip install azure-identity==1.5.0
 pip install azure-keyvault-secrets==4.2.0
 pip install setuptools
 
-sed -i 's/APP_PASSWORD_TO_REPLACE/Rf58Q~4~RG5EY--jXr--lME.j----0tkW7JaKb/g' .env
-cat .env
 python keyvault-client.py
 
 
@@ -89,6 +80,8 @@ az cognitiveservices account keys list --name ag-ai-services-multi --resource-gr
 #Visualize a metric
 #- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/03-monitor-ai-services.md#visualize-a-metric
 #To generate some requests
+cat ~/.env | grep AI_SERVICE_KEY
+#Note: Replace key in below URL
 curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: replacekey" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
 
 #Return to the Metrics page in the Azure portal and refresh the Total Calls count chart.
