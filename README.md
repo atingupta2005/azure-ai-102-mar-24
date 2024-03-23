@@ -17,9 +17,9 @@ cd ~/ai-102
 git clone https://github.com/atingupta2005/mslearn-ai-services
 git clone https://github.com/atingupta2005/mslearn-ai-vision
 git clone https://github.com/atingupta2005/mslearn-ai-language
-git clone https://github.com/atingupta2005/mslearn-ai-document-intelligence
-git clone https://github.com/atingupta2005/mslearn-knowledge-mining/
 git clone https://github.com/atingupta2005/mslearn-openai
+git clone https://github.com/atingupta2005/mslearn-knowledge-mining/
+git clone https://github.com/atingupta2005/mslearn-ai-document-intelligence
 ls
 ```
 

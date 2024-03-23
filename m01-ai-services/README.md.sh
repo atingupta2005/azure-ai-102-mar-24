@@ -12,12 +12,11 @@ git clone https://github.com/atingupta2005/mslearn-ai-services
 ls -al
 
 sudo chmod -R a+rw /pyenv
+p
 source /pyenv/bin/activate
 az login -u u1@atingupta.xyz -p changeme
 az account show
 
-
-sudo chmod -R a+rw /pyenv
 cd ~/ai-102/mslearn-ai-services/Labfiles/01-use-azure-ai-services/Python/rest-client/
 
 pip install python-dotenv
@@ -34,24 +33,17 @@ python sdk-client.py
 cd ~/ai-102/mslearn-ai-services/Labfiles/02-ai-services-security
 cat ~/.env | grep AI_SERVICE_KEY
 #Note: Replace key in below URL
-curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: replacekey" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
+curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: 760e818a45464965a6adc3e731535594" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
 
 #Create a key vault and add a secret using Azure portal if not already created
   #-Key vault name: kv-ai-practice
   #-Secret Name: AI-Services-Key
   #-Secret value: The key from azure ai resource. 
   
-#Createa service principal if required. Note: It is already created. No need to create
-#az cognitiveservices account keys list --name ag-ai-services-multi --resource-group rg-ai-practice
+#Createa service principal if required. Note: It is already created. No need to create. Verify if created?
 #az ad sp create-for-rbac -n "api://ag-ai-services" --role owner --scopes subscriptions/6896d70c-606d-4394-a6dc-f6fb42a97dfc/resourceGroups/rg-ai-practice
 
-#Give permissions to SP on Key Vault using Azure Portal
-{
-    "appId": "69bb7c51-f901-456b-ad19-83574a4fd128",
-    "displayName": "api://ag-ai-services",
-    "password": "Rf58Q~4~RG5EY--jXr--lME.j----0tkW7JaKb",
-    "tenant": "6bb2f9af-a0af-4c32-a5ec-5f7011d37551"
-}
+#Give permissions to SP on Key Vault using Azure Portal. Already done
 
 cat ~/.env | grep APP_PASSWORD
 
@@ -82,7 +74,7 @@ az cognitiveservices account keys list --name ag-ai-services-multi --resource-gr
 #To generate some requests
 cat ~/.env | grep AI_SERVICE_KEY
 #Note: Replace key in below URL
-curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: replacekey" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
+curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/:analyze-text?api-version=2023-04-01" -H "Content-Type: application/json" -H "Ocp-Apim-Subscription-Key: 760e818a45464965a6adc3e731535594" --data-ascii "{'analysisInput':{'documents':[{'id':1,'text':'hello'}]}, 'kind': 'LanguageDetection'}"
 
 #Return to the Metrics page in the Azure portal and refresh the Total Calls count chart.
 
@@ -93,5 +85,5 @@ curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/
 ##Deploy and run a Text Analytics container
 ##- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/04-use-a-container.md#deploy-and-run-a-text-analytics-container
 
-##Use the container
+##Use the container. Note: Replace the IP Address
 curl -X POST "http://52.224.30.99:5000/text/analytics/v3.0/languages" -H "Content-Type: application/json" --data-ascii "{'documents':[{'id':1,'text':'Hello world.'},{'id':2,'text':'Salut tout le monde.'}]}"
