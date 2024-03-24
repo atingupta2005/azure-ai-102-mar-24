@@ -1,6 +1,6 @@
 # mslearn-ai-services
 ## https://github.com/atingupta2005/mslearn-ai-services
-## Get Started with Azure AI Services
+## Lab: Get Started with Azure AI Services
 ### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/01-use-azure-ai-services.md
 cd ~
 rm -rf ~/azure-ai-102-mar-24
@@ -33,7 +33,7 @@ python sdk-client.py
 
 ### ------------------------------------------------------------
 
-## Manage Azure AI Services Security
+## Demo: Manage Azure AI Services Security
 ### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/02-ai-services-security.md
 cd ~/ai-102/mslearn-ai-services/Labfiles/02-ai-services-security
 cat ~/.env | grep AI_SERVICE_KEY
@@ -64,7 +64,7 @@ python keyvault-client.py
 
 ### ------------------------------------------------------------
 
-## Monitor Azure AI Services
+## Demo: Monitor Azure AI Services
 ### https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/03-monitor-ai-services.md
 #Configure an alert using Azure Portal
  #- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/03-monitor-ai-services.md#configure-an-alert
@@ -87,7 +87,7 @@ curl -X POST "https://ag-ai-services-multi.cognitiveservices.azure.com/language/
 
 ### ------------------------------------------------------------
 
-## Use an Azure AI Services Container
+## Extra (Only Self): Use an Azure AI Services Container
 ##- https://github.com/atingupta2005/mslearn-ai-services/blob/main/Instructions/Exercises/04-use-a-container.md#use-an-azure-ai-services-container
 
 #Deploy and run a Text Analytics container using Azure Portal

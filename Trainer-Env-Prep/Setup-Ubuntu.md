@@ -31,6 +31,7 @@ curl http://localhost:8787
 ## Install Python
 ```
 sudo apt install -y python3.8-venv python3-pip
+sudo rm -rf /pyenv
 sudo mkdir -p /pyenv
 sudo chmod -R 777 /pyenv
 python3 -m venv /pyenv

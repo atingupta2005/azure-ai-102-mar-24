@@ -17,17 +17,17 @@ source /pyenv/bin/activate
 az account show
 
 ## -------------------------------------------------
-## Use prebuilt Document Intelligence models
+## Demo: Use prebuilt Document Intelligence models
 ### https://github.com/atingupta2005/mslearn-ai-document-intelligence/blob/main/Instructions/Exercises/01-use-prebuilt-models.md
 cd ~/ai-102/mslearn-ai-document-intelligence/Labfiles/01*/Python
 
 ## -------------------------------------------------
-## Extract Data from Forms
+## Extra (Optional): Extract Data from Forms
 ### https://github.com/atingupta2005/mslearn-ai-document-intelligence/blob/main/Instructions/Exercises/02-custom-document-intelligence.md
 cd ~/ai-102/mslearn-ai-document-intelligence/Labfiles/02*/Python
 
 ## -------------------------------------------------
-## Create a composed Document Intelligence model
+## Lab: Create a composed Document Intelligence model
 ### https://github.com/atingupta2005/mslearn-ai-document-intelligence/blob/main/Instructions/Exercises/03-composed-model.md
 cd ~/ai-102/mslearn-ai-document-intelligence/Labfiles/03*/Python
 

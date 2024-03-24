@@ -1,7 +1,7 @@
 # mslearn-ai-vision
 ## https://github.com/atingupta2005/mslearn-ai-vision
 ## -------------------------------------------------------------------------------------
-## Analyze Images with Azure AI Vision
+## Lab: Analyze Images with Azure AI Vision
 ### https://github.com/atingupta2005/mslearn-ai-vision/blob/main/Instructions/Exercises/01-analyze-images.md
 cd ~
 rm -rf ~/azure-ai-102-mar-24
@@ -51,7 +51,7 @@ echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_pat
 
 
 ## -------------------------------------------------------------------------
-## Classify images with an Azure AI Vision custom model
+## Lab: Classify images with an Azure AI Vision custom model
 ##- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#classify-images-with-an-azure-ai-vision-custom-model
 cd ~/ai-102/mslearn-ai-vision/Labfiles/02-image-classification
 #head training-images/training_labels.json  # Already Done
@@ -63,13 +63,13 @@ head training-images/training_labels.json
 ##-In the left pane, select Containers and create a new container named fruit, and set Anonymous access level to Container (anonymous read access for containers and blobs).
 ##- Navigate to fruit, and upload the images (and the one JSON file) in Labfiles/02-image-classification/training-images to that container
 
-###Create a custom model training project-Pending
+###Create a custom model training project
 #- Follow instructions at URL below:
 ####- https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/02-image-classification.md#create-a-custom-model-training-project
 
 
 ## -------------------------------------------------------------------------------------
-## Detect Objects in Images with Custom Vision
+## Demo: Detect Objects in Images with Custom Vision
 ### https://github.com/atingupta2005/mslearn-ai-vision/blob/main/Instructions/Exercises/03-custom-vision-object-detection(legacy).md
 ### Create Custom Vision resources (Already Done)
 #-agaicustomvisionmar24
@@ -107,7 +107,7 @@ python test-detector.py  # Pending - Error: Invalid iteration
 
 ## -------------------------------------------------------------------------
 
-## Detect and Analyze Faces
+## Demo: Detect and Analyze Faces
 ### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/04-face-service.md
 pip install azure-ai-vision==0.15.1b1
 cd ~/ai-102/mslearn-ai-vision/Labfiles/04*/Python/computer-vision
@@ -126,7 +126,7 @@ echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_pat
 
 ## -------------------------------------------------------------------------
 
-## Read Text in Images
+## Lab: Read Text in Images
 ### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/05-ocr.md
 cd ~/ai-102/mslearn-ai-vision/Labfiles/05*/Python/read-text
 pip install azure-ai-vision-imageanalysis==1.0.0b1
@@ -139,7 +139,7 @@ echo http://vm-ubuntu-ai-102.eastus2.cloudapp.azure.com:8787/files/$relative_pat
 
 ## -------------------------------------------------------------------------
 
-## Analyze Video with Video Analyzer
+## Demo: Analyze Video with Video Analyzer
 ### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/06-video-indexer.md
 ### Follow instructions at above URL
 cd ~/ai-102/mslearn-ai-vision/Labfiles/06*/
@@ -149,7 +149,7 @@ chmod a+x ./get-videos.sh
 
 ## -------------------------------------------------------------------------
 
-## Classify Images with Azure AI Custom Vision
+## Lab: Classify Images with Azure AI Custom Vision
 ### https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Instructions/Exercises/07-custom-vision-image-classification(legacy).md
 ###- Follow instructions as above URL
 
