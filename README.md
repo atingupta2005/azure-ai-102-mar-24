@@ -37,9 +37,11 @@ git clone https://github.com/MicrosoftLearning/mslearn-openai
 dir
 ```
 
-### Create Python Virtual Environment
+### Open CMD and Create Python Virtual Environment
+- Note: Do not open Powershell
 ```
 python -m venv c:\venv
+c:\venv\Scripts\activate
 ```
 
 
