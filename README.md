@@ -44,6 +44,28 @@ python -m venv c:\venv
 c:\venv\Scripts\activate
 ```
 
+```
+pip install python-dotenv
+pip install azure-ai-textanalytics==5.3.0
+pip install azure-ai-textanalytics==5.3.0
+pip install azure-identity==1.5.0
+pip install azure-keyvault-secrets==4.2.0
+pip install setuptools
+pip install azure-ai-vision-imageanalysis==1.0.0b1
+pip install pillow==6.2.2
+pip install matplotlib
+pip install azure-cognitiveservices-vision-customvision==3.1.0
+pip install azure-cognitiveservices-vision-face==0.6.0
+pip install azure-ai-vision-imageanalysis==1.0.0b1
+pip install azure-ai-language-questionanswering
+pip install azure-ai-language-conversations
+pip install azure-ai-textanalytics==5.3.0
+pip install azure-ai-translation-text==1.0.0b1
+pip install azure-cognitiveservices-speech==1.30.0
+pip install playsound==1.2.2
+pip install azure-search-documents==11.0.0
+pip install Flask
+```
 
 ### Connect to Azure CLI
 ```
