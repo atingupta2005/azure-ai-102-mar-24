@@ -89,7 +89,7 @@ cat train-detector.py | grep getenv
 cat train-detector.py
 cat ~/.env | grep Training
 cat ~/.env | grep Project
-python train-detector.py   # Pending. Need to debug the code as not able to upload images
+python train-detector.py
 
 ### Train and test a model
 ### Publish the object detection model
@@ -103,7 +103,7 @@ cat test-detector.py | grep getenv
 cat ~/.env | grep Prediction
 cat ~/.env | grep ProjectID
 cat ~/.env | grep ModelName
-python test-detector.py  # Pending - Error: Invalid iteration
+python test-detector.py  # Pending - Error: Invalid project type for operation
 
 ## -------------------------------------------------------------------------
 

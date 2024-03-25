@@ -45,13 +45,13 @@ cd ~/ai-102/mslearn-ai-language/Labfiles/03*/Python/clock-client
 cat clock-client.py | grep getenv
 cat ~/.env | grep LS_
 pip install azure-ai-language-conversations
-python clock-client.py      # Pending - Not working
+python clock-client.py      # Pending - Not working. (404) Resource not found
 
 ####-----------------------------------------------------
 
 ## Demo: Custom text classification
 ###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/04-text-classification.md
-- Pending - Not Working: Some error ar Portal itself - "Some error has occured. Please refresh the page"
+# - Pending - Not Working: Some error ar Portal itself - "Some error has occured. Please refresh the page"
 cd ~/ai-102/mslearn-ai-language/Labfiles/04*/Python/classify-text
 pip install azure-ai-textanalytics==5.3.0
 python classify-text.py
@@ -61,7 +61,7 @@ python classify-text.py
 
 ## Extra: Extract custom entities
 ###- https://github.com/atingupta2005/mslearn-ai-language/blob/main/Instructions/Exercises/05-extract-custom-entities.md
-- Pending - Not Working: Some error ar Portal itself - "Some error has occured. Please refresh the page"
+# - Pending - Not Working: Some error ar Portal itself - "Some error has occured. Please refresh the page"
 
 cd ~/ai-102/mslearn-ai-language/Labfiles/05*/Python/
 
