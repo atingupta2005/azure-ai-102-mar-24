@@ -70,3 +70,10 @@ az cognitiveservices account keys list --name ag-ai-services-multi --resource-gr
 - Region: Choose the same region you used for your Azure AI Service resource
 
 
+## Important URLs:
+ - https://github.com/MicrosoftLearning/mslearn-ai-services
+ - https://github.com/MicrosoftLearning/mslearn-ai-vision
+ - https://github.com/MicrosoftLearning/mslearn-ai-language
+ - https://github.com/MicrosoftLearning/mslearn-ai-document-intelligence
+ - https://github.com/MicrosoftLearning/mslearn-knowledge-mining/
+ - https://github.com/MicrosoftLearning/mslearn-openai
